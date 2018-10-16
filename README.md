@@ -11,6 +11,7 @@ An executable:
 
 ```php
 <?php
+#!/usr/bin/env php
 # executable.php
 
 use Makasim\RabbitmqCliConsumer\RabbitmqCliConsumerConnectionFactory;
@@ -35,7 +36,7 @@ if ($message = $consumer->receiveNoWait()) {
 Run
 
 ```
-rabbitmq-cli-consumer --verbose --url amqp://guest:guest@localhost --include --pipe --queue myqueue --executable "command.php myqueue"
+rabbitmq-cli-consumer --verbose --url amqp://guest:guest@localhost --include --pipe --queue myqueue --executable "executable.php myqueue"
 ```
 
 ## License
