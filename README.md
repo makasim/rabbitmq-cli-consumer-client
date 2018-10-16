@@ -1,6 +1,4 @@
-# Rabbitmq Cli Consumer Client 
-
-[Queue Interop](https://github.com/queue-interop/queue-interop) based client for [rabbitmq-cli-consumer](https://github.com/corvus-ch/rabbitmq-cli-consumer).  
+[Queue Interop](https://github.com/queue-interop/queue-interop) based wrapper for [rabbitmq-cli-consumer](https://github.com/corvus-ch/rabbitmq-cli-consumer).  
 
 ## Usage
 
