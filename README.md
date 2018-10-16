@@ -19,7 +19,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $context = (new RabbitmqCliConsumerConnectionFactory())->createContext();
 
-$queue = $context->createQueue('aQueue');
+$queue = $context->createQueue($argv[1]);
 $consumer = $context->createConsumer($queue);
 
 if ($message = $consumer->receiveNoWait()) {
@@ -30,6 +30,12 @@ if ($message = $consumer->receiveNoWait()) {
     // or
     //$consumer->reject($message);
 }
+```
+
+Run
+
+```
+rabbitmq-cli-consumer --verbose --url amqp://guest:guest@localhost --include --pipe --queue myqueue --executable "command.php myqueue"
 ```
 
 ## License
