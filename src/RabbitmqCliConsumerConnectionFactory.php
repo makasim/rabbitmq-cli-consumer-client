@@ -19,7 +19,7 @@ class RabbitmqCliConsumerConnectionFactory implements ConnectionFactory
 
     public function createContext(): Context
     {
-        $dsn = new Dsn($this->dsn);
+        $dsn = Dsn::parseFirst($this->dsn);
         if ('rabbitmq-cli-consumer' !== $dsn->getSchemeProtocol()) {
             throw new \LogicException('Protocol is not supported');
         }
